@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Brian's Appointment program</title>
+<link href="css/bootstrap.css" rel="stylesheet"> 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ 
+</head>
+<body>
+
+<!--Jquery form -->
+<div class="col-md-6" style="padding-top:10px;">
+
+	<input type="button" value="New" id="new_button"/>
+	
+	<div id="new_form" style="display:none;margin-top:10px;">
+		<input type="button" value="Add" id="add_appointment_button"/>
+		<input type="button" value="Cancel" id="cancel_button"/>
+		<span id="save_status2"></span>
+		<br/>
+
+		<div class="form-group">
+			<label for="exampleInputDate">Date</label>
+			<input type="text" class="form-control" id="theDate" placeholder="Enter Date">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputTime">Time</label>
+			<input type="text" pattern="([01]?[0-9]|2[0-3])(:[0-5][0-9]){2}" required="required" class="form-control" id="theTime" placeholder="e.g. 11:00am">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputDecription">Description</label>
+			<input type="text" class="form-control" id="theDesc" placeholder="Enter description">
+		</div>
+	</div>
+
+</div>
+
+
+<hr/>
+
+<!--AJAX search-->
+
+<div class="col-md-6 form-group" style="padding-top:10px;">
+	<input type="text" class="form-control" id="search_box" placeholder="Search"/>
+	<br/>
+	<input type="button" value="search" id="search_button"/>
+
+</div>
+
+<!--AJAX data-->
+<div style="width:650px;height:500px;border:1px solid #ccc;margin-top:20px;margin-left:15px;border-radius:4px;">
+	<span id="save_status"></span>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/fadein.js"></script>
+<script type="text/javascript" src="ajax_appointment.js"></script>
+<script type="text/javascript" src="ajax_show_appointments.js"></script>
+
+
+<!-- The date picker scripts from JQuery website -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#theDate" ).datepicker();
+} );
+</script>
+</html>

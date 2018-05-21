@@ -1,0 +1,6 @@
+Instructions:
+
+1. This program can run on an Apache server from XXAMP, under the htdocs folder and was built from a Windows environment
+2. There is a SQL file called "appointments_test_data and SQL" inside the "Database Files and SQL test data" folder that contains SQL for creating the database,
+creating the required table and also some test data that can be imported to the table.
+3. I have attached screenshots of how the app and database should appear after successfully installing them.
