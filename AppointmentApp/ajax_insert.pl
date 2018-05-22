@@ -6,7 +6,7 @@ use CGI qw(:standard);
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 
 my $driver = "SQLite"; 
-my $database = "dbname";
+my $database = "dbname.db";
 my $dsn = "DBI:$driver:database=$database";
 my $userid = "root";
 my $password = "";
@@ -25,11 +25,9 @@ my $sth = $dbh->prepare("INSERT INTO `appointments` SET `date`='$theDate', `time
 $sth->execute() or die $DBI::errstr;
 
 print "Content-type: text/html; charset=iso-8859-1\n\n";
-print "<phtml>";
-print "<body>";
+
 print "Successfully added";
-print "</body>";
-print "</html>";
+
 
 $sth->finish();
 #$dbh->commit or die $DBI::errstr;
