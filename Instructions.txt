@@ -1,6 +1,11 @@
 Instructions:
 
 1. This program can run on an Apache server from XXAMP, under the htdocs folder and was built from a Windows environment
-2. There is a SQL file called "appointments_test_data and SQL" inside the "Database Files and SQL test data" folder that contains SQL for creating the database,
-creating the required table and also some test data that can be imported to the table.
-3. I have attached screenshots of how the app and database should appear after successfully installing them.
+2. There is a SQL file called "appointments_test_data and SQL" inside the "Database Files and SQL test data" folder that contains SQL for creating the database, creating the required table and also some test data that can be imported to the table.
+3. I have attached screenshots of how the app and database should appear after successfully installing everything.
+
+Notes:
+- ajax_appointment.js is used to add a new appointment to the database appointments table and calls on the ajax_insert.pl perl file to do so.
+- ajax_show_appointments.js is used to return data of the searched for appointments. There were issues I ran into for returning data in json format from the ajax_show.pl perl file so I commented out parts of the code and used a regular "Content-type: text/html;" to return the results.
+- js/fadein.js is used to hide and display the form using JQuery
+
